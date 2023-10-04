@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MANISH PROGRAMMER</title>
+    <style>
+  h3{
+      color:grey;
+  }
+ #animatedText {
+            font-size: 24px;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h3> &nbsp; &nbsp &nbsp Hello My name is </h3>
+        <div id="animatedText"><h1>MANISH Programmer</h1></div>
+
+    <script>
+        // JavaScript to animate the text color
+        const textElement = document.getElementById("animatedText");
+        const colors = ["red", "green", "pink", "orange", "purple","black","cyan","rose","silver"];
+        let currentColorIndex = 0;
+
+        function changeTextColor() {
+            textElement.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        // Set an interval to change the text color every 1000 milliseconds (1 second)
+        setInterval(changeTextColor, 1000);
+    </script>
+
+</body>
+</html>
